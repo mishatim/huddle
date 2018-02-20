@@ -90,13 +90,13 @@ employee                              department
 5.  Write an SQL query to list the full name of every employee,
     alphabetized by first name.
     Ans:
-    select name from employee order by name
+    SELECT name FROM employee ORDER BY name
     
 6.  Write an SQL query to list the full name of every employee,
     alphabetized by last name.
     Ans:
     	SELECT name as FullName
-	FROM question 
+	FROM employee 
 	ORDER BY PARSENAME(REPLACE(name,' ','.'),1)
 	-- inspired by this https://stackoverflow.com/a/24320623
 	-- drawback: it works only with up to 4 tokens 
