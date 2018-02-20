@@ -16,12 +16,40 @@ Developer Test
 ==============
 
 1.  What editor will you use to edit this file, and why?
+		Ans:
+		Will use default built-in editor in Github because it's easy and straightforward. 
+		Alternatively I could use Notepad++ on my PC and updload the file to Github.
+
 2.  Some of the questions will ask for a solution in the language of
     your choice.  What language(s) will you choose, and why?
+    Ans:
+		Java and C# are languages of my choice for this assignment.
+		Reason is I am familiar with C family of languages. 
+		A scripting language would work as well, but my personal choice are those two above.
+
 3.  Explain the difference between testing and debugging.
+		Ans:
+		Testing is validation of the code according to the expected results.
+		Debugging is troubleshooting of the code which failed testing or simply does not work.
+
 4.  Consider a user querying a search engine.  Describe, in as much
     detail as you like, what happens between the user clicking the
     "submit" button and the display of the results.
+		Ans:
+		Assuming this use case applies to browser based search.
+		Modern web interfaces usually built with JavaScript.
+		So the button will have a listener registered on it that will call a function to navigate to a predefined URL.
+		The http request is of type GET. The search parameters are appended to the URL as name/value pairs.
+		The URL typically invokes a Web Server (e.g. Tomcat) endpoint which is defined either in web.xml file or via annotations in servlet or a Spring controller.
+		Search parameters are passed to the service which invokes an operation to search data store for the passed in values.
+		There are many search mechanisms available starting with straight forward DB SQL query to Elastic search to a fancy Google operations.
+		With a DB search, one of the options would be to access DB via DAO objects thru Hibernate layer or a direct JDBC call.
+		Results of DB query are returned in the form of a list which is converted from DAO to service format (e.g. JSON).
+		The JSON is added to the http response body. The response header is set to text/json.
+		Then the resonse is written to the output stream for the browser to consume.
+		Browser expects the response to be in JSON format, so the JavaScript converts the JSON string (from the body) into a user friendly format to be displayed on the browser (typically as a list).
+		The default web transport protocol is HTTP(s) which is transparent for this types of operations.
+		There are other protocols (QUIC or IPFS) that are not widely supported by the browsers.
 
 The two tables below describe relationships between employees,
 managers, and departments (the columns employee.mgr_id and
