@@ -9,7 +9,7 @@ public class Sorter {
 		this.arr = array;
 	}
 	
-    public void QuickSort(int left, int right) {
+    public void quickSort(int left, int right) {
 
     	// pick pivot - middle of the array
         int pivotIndex = left + (right - left) / 2;
@@ -41,11 +41,11 @@ public class Sorter {
 
             // recursively call self until j reaches left
             if(left < j) {
-            	QuickSort(left, j);
+            	quickSort(left, j);
             }
             // call self until i reaches the right
             if(right > i) {
-            	QuickSort(i, right);
+            	quickSort(i, right);
             }
         }
     }
@@ -60,7 +60,7 @@ public class Sorter {
 		int start = 0;
 		int end = arr.length - 1;
  
-		new Sorter(arr).QuickSort(start, end);
+		new Sorter(arr).quickSort(start, end);
 		
 		System.out.println("Sorted list: " + Arrays.toString(arr));
     }
