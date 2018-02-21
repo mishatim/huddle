@@ -103,9 +103,9 @@ employee                              department
 7.  Write an SQL query to list the full name of every employee along
     with the full name of his/her manager.
     Ans:
-    	SELECT emp.name AS Employee, mgr.name AS Manager
-	FROM employee emp 
-	JOIN employee mgr ON emp.mgr_id = mgr.id
+    	SELECT emp.name AS Employee, mgr.name as Manager
+	FROM employee emp, employee mgr
+	WHERE emp.mgr_id = mgr.id
     
 8.  Write an SQL query to list the full name of every employee in the
     Sales department.
