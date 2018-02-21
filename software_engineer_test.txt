@@ -102,18 +102,50 @@ employee                              department
 	-- drawback: it works only with up to 4 tokens 
 7.  Write an SQL query to list the full name of every employee along
     with the full name of his/her manager.
+    Ans:
+    	SELECT emp.name AS Employee, mgr.name AS Manager
+	FROM employee emp 
+	JOIN employee mgr ON emp.mgr_id = mgr.id
+    
 8.  Write an SQL query to list the full name of every employee in the
     Sales department.
+    Ans:
+    SELECT emp.name 
+    FROM employee emp, department dep
+    WHERE dep.name = 'Sales'
+    AND emp.mgr_id = dep.head 
+    
 9.  Write an SQL query to list the full name of every employee along
     with name of his/her department.
+    Ans:
+    SELECT emp.name, dep.name 
+    FROM employee emp, department dep
+    WHERE emp.mgr_id = dep.head
+    
 10. Is there a better design for a database that supports the queries
     described in questions 5-9?  If so, describe it.  If not, why not?
+    Ans:
+    Yes, there are few improvements could be done.
+    a. Separate employee.name into two columns FirstName, LastName
+    b. Create a separate table for managers that references employee id as FK
+    c. Department table would reference managers table
+    
 11. Write a function in the language of your choice that implements
     quicksort on an array of integers.
+    Ans: see QuickSort.java in the same repository.
+    
 12. Write a function in the language of your choice that performs
     binary search on a sorted array of integers.
+    Ans: see BinSearch.java in the same repository.
+    
 13. Write a function in the language of your choice that performs the query
     you wrote for question 7, and outputs the results as an HTML table.
+    Ans: I'll use MVP (minimum viable product) principle here, and will deliver exactly what's asked.
+    Interpret requirements af following:
+    Arbitrary DB and DB access mechanism to shield the app from DB implementation.
+    Query is parameterized.
+    Returns a string containing HTML representing a table of values.
+    
 14. Write a program in the language of your choice that takes a filename
     and a number N as arguments and retrieves and outputs the Nth line
     from the file.
