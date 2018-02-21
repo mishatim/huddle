@@ -132,15 +132,16 @@ employee                              department
     
 11. Write a function in the language of your choice that implements
     quicksort on an array of integers.
-    Ans: see QuickSort.java in the same repository.
+    Ans: see Sorter.java in the same repository.
     
 12. Write a function in the language of your choice that performs
     binary search on a sorted array of integers.
-    Ans: see BinSearch.java in the same repository.
+    Ans: see Searcher.java in the same repository.
     
 13. Write a function in the language of your choice that performs the query
     you wrote for question 7, and outputs the results as an HTML table.
-    Ans: I'll use MVP (minimum viable product) principle here, and will deliver exactly what's asked.
+    Ans: 
+    I'll use MVP (minimum viable product) principle here, and will deliver exactly what's asked.
     Interpret requirements af following:
     Arbitrary DB and DB access mechanism to shield the app from DB implementation.
     Query is parameterized.
