@@ -154,6 +154,8 @@ employee                              department
 14. Write a program in the language of your choice that takes a filename
     and a number N as arguments and retrieves and outputs the Nth line
     from the file.
+    Ans: see LineGetter.java
+   
 15. Write the function from question 12 in a different language.
 16. Write the program from question 14 in a different language (it can
     be the same language you used for #15, but it doesn't have to be).
