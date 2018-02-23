@@ -162,3 +162,7 @@ employee                              department
 	
 16. Write the program from question 14 in a different language (it can
     be the same language you used for #15, but it doesn't have to be).
+    Ans:
+    This is essentially one liner (but I included the src file as well LineGetter.cs):
+    string line = File.ReadLines(file).Skip(N).Take(1).First();
+    
