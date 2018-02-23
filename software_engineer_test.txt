@@ -149,6 +149,8 @@ employee                              department
     NOTE: it's a bad practice to keep multiple classes in one file, but for sake of ease of viewing I kept them like that.
     See DbToHtml.java
     
+    p.s. Need to mention, the implementation tries to follow MVC pattern with IoC principle (injections) and code to interfaces.
+    
 14. Write a program in the language of your choice that takes a filename
     and a number N as arguments and retrieves and outputs the Nth line
     from the file.
