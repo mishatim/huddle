@@ -146,6 +146,8 @@ employee                              department
     Arbitrary DB and DB access mechanism to shield the app from DB implementation.
     Query is parameterized.
     Returns a string containing HTML representing a table of values.
+    NOTE: it's a bad practice to keep multiple classes in one file, but for sake of ease of viewing I kept them like that.
+    See DbToHtml.java
     
 14. Write a program in the language of your choice that takes a filename
     and a number N as arguments and retrieves and outputs the Nth line
